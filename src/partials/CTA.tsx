@@ -1,20 +1,11 @@
-import {
-  GradientText,
-  Newsletter,
-  Section,
-} from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 const CTA = () => (
   <Section>
-    <Newsletter
-      title={
-        <>
-          Subscribe to my <GradientText>Newsletters</GradientText>
-        </>
-      }
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-          esse non molestias eos excepturi, inventore atque cupiditate."
-    />
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <h2 className="text-2xl font-bold">Want to contact me?</h2>
+      <p className="text-center text-lg">veneiroyt@protonmail.com</p>
+    </div>
   </Section>
 );
 

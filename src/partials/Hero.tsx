@@ -10,33 +10,21 @@ const Hero = () => (
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi there, I'm <GradientText>Veneiro</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          Hey, I am Mateo, also known as Veneiro on the web. I am a Student on
+          the EII of Oviedo
         </>
       }
       avatar={
-        <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
-          alt="Avatar image"
-          loading="lazy"
-        />
+        <img src="/assets/images/avatar.svg" alt="Avatar" loading="lazy" />
       }
       socialButtons={
         <>
-          <a href="/">
+          <a href="https://twitter.com/Veneiro4738">
             <HeroSocial
               src="/assets/images/twitter-icon.png"
               alt="Twitter icon"
@@ -48,13 +36,13 @@ const Hero = () => (
               alt="Facebook icon"
             />
           </a>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/mateo-rico-iglesias-76821b263/">
             <HeroSocial
               src="/assets/images/linkedin-icon.png"
               alt="Linkedin icon"
             />
           </a>
-          <a href="/">
+          <a href="https://www.youtube.com/channel/UCSiDElkACkKHaqzS9CdZmWA">
             <HeroSocial
               src="/assets/images/youtube-icon.png"
               alt="Youtube icon"

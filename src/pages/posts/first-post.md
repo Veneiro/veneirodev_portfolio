@@ -1,9 +1,9 @@
 ---
 layout: '@/templates/BasePost.astro'
-title: 1st Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-02-01T00:00:00Z
-imgSrc: '/assets/images/image-post7.jpeg'
+title: Curriculum Vitae
+description: My Curriculum Vitae
+pubDate: 2024-09-30T00:00:00Z
+imgSrc: '/assets/images/image-post-cv.png'
 imgAlt: 'Image post 7'
 ---
 
