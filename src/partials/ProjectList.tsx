@@ -22,8 +22,8 @@ const ProjectList = () => (
         a trivia like game where users answer questions to win juicy prizes 🥇"
         link="https://github.com/Arquisoft/wiq_en3b"
         img={{
-          src: '/assets/images/project-web-design.png',
-          alt: 'Project Web Design',
+          src: '/assets/images/kawLogo.png',
+          alt: 'Know And Win Logo',
         }}
         category={
           <>
@@ -37,7 +37,7 @@ const ProjectList = () => (
         description="The tanks Blitz Game is a local multiplayer game where you can challenge your mates
         in exciting battles on a random scenario"
         link="https://github.com/Veneiro/sev2DVideogame"
-        img={{ src: '/assets/images/project-fire.png', alt: 'Project Fire' }}
+        img={{ src: '/assets/images/tanksLogo.png', alt: 'Tanks Blitz Logo' }}
         category={
           <>
             <Tags color={ColorTags.BLUE}>C++</Tags>
@@ -48,7 +48,7 @@ const ProjectList = () => (
         name="Pong"
         description="The classic Pong game you love but with a reimagined design and a new twist"
         link="https://github.com/Veneiro/PongP5JS"
-        img={{ src: '/assets/images/project-maps.png', alt: 'Project Maps' }}
+        img={{ src: '/assets/images/pongLogo.png', alt: 'Pong Logo' }}
         category={
           <>
             <Tags color={ColorTags.RED}>P5JS</Tags>
@@ -62,8 +62,8 @@ const ProjectList = () => (
         name="Discord Music Bot"
         description="A Discord bot that plays music in your server in the old way without slash commands just for the people that wants to have a bot that
         works better with Youtube as before and accepts Youtube urls"
-        link="/"
-        img={{ src: '/assets/images/project-maps.png', alt: 'Project Maps' }}
+        link="https://github.com/Veneiro/Captain-Alex-BOT"
+        img={{ src: '/assets/images/discLogo.png', alt: 'Discord Bot Logo' }}
         category={
           <>
             <Tags color={ColorTags.CYAN}>Python</Tags>
