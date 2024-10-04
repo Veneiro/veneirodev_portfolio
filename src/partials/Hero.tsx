@@ -32,7 +32,7 @@ const Hero = () => (
           </a>
           <a href="https://www.linkedin.com/in/mateo-rico-iglesias-76821b263/">
             <HeroSocial
-              src="/assets/images/linkedin-icon.png"
+              src="/assets/images/In-White-128.png"
               alt="Linkedin icon"
             />
           </a>

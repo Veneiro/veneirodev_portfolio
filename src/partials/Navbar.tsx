@@ -23,11 +23,10 @@ const Navbar = () => (
       </a>
 
       <NavMenu>
-        <NavMenuItem href="/posts/">Blogs</NavMenuItem>
-        <NavMenuItem href="https://github.com/Veneiro">GitHub</NavMenuItem>
-        <NavMenuItem href="https://twitter.com/Veneiro4738">
-          Twitter
-        </NavMenuItem>
+        <NavMenuItem href="/posts/">Docs</NavMenuItem>
+        <NavMenuItem href="/">Career</NavMenuItem>
+        <NavMenuItem href="/">Experience</NavMenuItem>
+        <NavMenuItem href="/">Certificates</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
   </Section>
