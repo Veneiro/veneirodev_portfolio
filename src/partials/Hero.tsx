@@ -20,7 +20,12 @@ const Hero = () => (
         </>
       }
       avatar={
-        <img src="/assets/images/avatar.svg" alt="Avatar" loading="lazy" />
+        <img
+          src="/assets/images/face.png"
+          style={{ width: '20em', height: 'auto' }}
+          alt="Myself"
+          loading="lazy"
+        />
       }
       socialButtons={
         <>

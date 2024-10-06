@@ -23,10 +23,11 @@ const Navbar = () => (
       </a>
 
       <NavMenu>
-        <NavMenuItem href="/posts/">Docs</NavMenuItem>
-        <NavMenuItem href="/">Career</NavMenuItem>
-        <NavMenuItem href="/">Experience</NavMenuItem>
-        <NavMenuItem href="/">Certificates</NavMenuItem>
+        <NavMenuItem href="/">🏠Home</NavMenuItem>
+        <NavMenuItem href="/posts/">📄Docs</NavMenuItem>
+        <NavMenuItem href="/career/">💼Career</NavMenuItem>
+        <NavMenuItem href="/experience/">🧠Experience</NavMenuItem>
+        <NavMenuItem href="/certificates/">🎖️Certificates</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
   </Section>
