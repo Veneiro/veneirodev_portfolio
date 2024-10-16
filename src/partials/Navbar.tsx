@@ -24,8 +24,9 @@ const Navbar = () => (
 
       <NavMenu>
         <NavMenuItem href="/">🏠Home</NavMenuItem>
-        <NavMenuItem href="/posts/">📄Docs</NavMenuItem>
-        <NavMenuItem href="/career/">💼Career</NavMenuItem>
+        <NavMenuItem href="/projects/">🖥️Projects</NavMenuItem>
+        <NavMenuItem href="/cv/">🪪Curriculum </NavMenuItem>
+        <NavMenuItem href="/studies/">💼Studies</NavMenuItem>
         <NavMenuItem href="/experience/">🧠Experience</NavMenuItem>
         <NavMenuItem href="/certificates/">🎖️Certificates</NavMenuItem>
       </NavMenu>

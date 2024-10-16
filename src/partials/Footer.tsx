@@ -1,10 +1,13 @@
-import { FooterCopyright, Section } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 import { AppConfig } from '@/utils/AppConfig';
 
 const Footer = () => (
   <Section>
-    <FooterCopyright site_name={AppConfig.site_name} />
+    <div className="border-t border-gray-600 pt-4 text-center text-gray-400">
+      &copy; {new Date().getFullYear()} {AppConfig.site_name}. All rights
+      reserved.
+    </div>
   </Section>
 );
 

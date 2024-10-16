@@ -1,7 +1,8 @@
 ---
+import { Section } from 'astro-boilerplate-components';
+
 import Base from '@/templates/Base.astro';
 import { sortByDate } from '@/utils/Posts';
-import { Section } from 'astro-boilerplate-components';
 
 type GetStaticPaths = {
   paginate: any;
@@ -18,7 +19,10 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
 
 // Helper function to format dates
 const formatDate = (date: string) => {
-  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long' };
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+  };
   return new Date(date).toLocaleDateString('es-ES', options);
 };
 
@@ -26,19 +30,26 @@ const { page } = Astro.props;
 const sortedTimeline = sortByDate(page.data);
 ---
 
-<Base head={{ title: 'Cronologic Line', description: 'Important moments in my life as an student' }}>
+<Base
+  head={{
+    title: 'Cronologic Line',
+    description: 'Important moments in my life as an student',
+  }}
+>
   <Section>
-    <h2 class="text-2xl font-bold mb-4">My Career</h2>
-    <div class="timeline">
+    <h2 class='mb-4 text-2xl font-bold'>My Studies</h2>
+    <div class='timeline'>
       {sortedTimeline.map((hito) => (
         <div class="timeline-item mb-6" key={hito.frontmatter.date}>
-          <div 
-            class="timeline-marker h-3 w-3 rounded-full" 
+          <div
+            class="timeline-marker h-3 w-3 rounded-full"
             style={`background-color: ${hito.frontmatter.color || '#3498db'}`}
-          ></div>
+          />
           <div class="timeline-content">
             <h3 class="text-xl font-semibold">{hito.frontmatter.title}</h3>
-            <p class="text-gray-500 text-sm">{formatDate(hito.frontmatter.date)}</p>
+            <p class="text-sm text-gray-500">
+              {formatDate(hito.frontmatter.date)}
+            </p>
             <p>{hito.frontmatter.description}</p>
           </div>
         </div>
