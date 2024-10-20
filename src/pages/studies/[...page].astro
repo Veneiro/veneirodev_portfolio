@@ -1,14 +1,10 @@
 ---
 import type { MarkdownInstance } from 'astro';
-import type {
-  IFrontmatter,
-  MarkdownInstance,
-} from 'astro-boilerplate-components';
 import { Section } from 'astro-boilerplate-components';
 import type { IFrontmatter } from 'astro-boilerplate-components/dist/esm/types/IFrontMatter';
 
 import Base from '@/templates/Base.astro';
-import { sortByDate } from '@/utils/Posts';
+import { sortByDate, sortByMyself } from '@/utils/Posts';
 
 type GetStaticPaths = {
   paginate: any;
@@ -36,21 +32,6 @@ const formatDateRange = (startDate: string, endDate?: string) => {
   const formattedStartDate = formatDate(startDate);
   const formattedEndDate = endDate ? formatDate(endDate) : 'Present';
   return `${formattedStartDate} - ${formattedEndDate}`;
-};
-
-export const sortByMyself = (posts: MarkdownInstance<IFrontmatter>[]) => {
-  return posts.sort((a, b) => {
-    if (
-      a.frontmatter.order !== undefined &&
-      b.frontmatter.order !== undefined
-    ) {
-      return a.frontmatter.order - b.frontmatter.order;
-    }
-    return (
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-    );
-  });
 };
 
 const { page } = Astro.props;

@@ -7,10 +7,10 @@ import { ProjectList } from '@/partials/ProjectList';
 import { RecentPosts } from '@/partials/RecentPosts';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-import { sortByDate } from '@/utils/Posts';
+import { sortByMyself } from '@/utils/Posts';
 
 const allPosts = await Astro.glob<IFrontmatter>('./projects/*.md');
-const sortedPosts = sortByDate(allPosts);
+const sortedPosts = sortByMyself(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;

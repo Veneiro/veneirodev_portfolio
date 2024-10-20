@@ -7,6 +7,13 @@ imgSrc: '/assets/images/kawLogo.png'
 imgAlt: 'Know And Win Logo'
 ---
 
+---
+
+<h2>Link</h2>
+  Gihub <a href="https://github.com/Arquisoft/wiq_en3b">link</a> for you to try it
+
+---
+
 # 📎 Welcome to Know and Win Application 📎
 
 [![Deploy on release](https://github.com/Arquisoft/wiq_en3b/actions/workflows/release.yml/badge.svg)](https://github.com/Arquisoft/wiq_en3b/actions/workflows/release.yml)
