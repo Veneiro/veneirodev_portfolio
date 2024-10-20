@@ -1,5 +1,11 @@
 ---
+import type { MarkdownInstance } from 'astro';
+import type {
+  IFrontmatter,
+  MarkdownInstance,
+} from 'astro-boilerplate-components';
 import { Section } from 'astro-boilerplate-components';
+import type { IFrontmatter } from 'astro-boilerplate-components/dist/esm/types/IFrontMatter';
 
 import Base from '@/templates/Base.astro';
 import { sortByDate } from '@/utils/Posts';
@@ -26,8 +32,29 @@ const formatDate = (date: string) => {
   return new Date(date).toLocaleDateString('es-ES', options);
 };
 
+const formatDateRange = (startDate: string, endDate?: string) => {
+  const formattedStartDate = formatDate(startDate);
+  const formattedEndDate = endDate ? formatDate(endDate) : 'Present';
+  return `${formattedStartDate} - ${formattedEndDate}`;
+};
+
+export const sortByMyself = (posts: MarkdownInstance<IFrontmatter>[]) => {
+  return posts.sort((a, b) => {
+    if (
+      a.frontmatter.order !== undefined &&
+      b.frontmatter.order !== undefined
+    ) {
+      return a.frontmatter.order - b.frontmatter.order;
+    }
+    return (
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+    );
+  });
+};
+
 const { page } = Astro.props;
-const sortedTimeline = sortByDate(page.data);
+const sortedTimeline = sortByMyself(page.data);
 ---
 
 <Base
@@ -38,6 +65,8 @@ const sortedTimeline = sortByDate(page.data);
 >
   <Section>
     <h2 class='mb-4 text-2xl font-bold'>My Studies</h2>
+    <p class='mb-4'>
+      Remarkable studies and courses I have taken over the years
     <div class='timeline'>
       {sortedTimeline.map((hito) => (
         <div class="timeline-item mb-6" key={hito.frontmatter.date}>
@@ -48,7 +77,7 @@ const sortedTimeline = sortByDate(page.data);
           <div class="timeline-content">
             <h3 class="text-xl font-semibold">{hito.frontmatter.title}</h3>
             <p class="text-sm text-gray-500">
-              {formatDate(hito.frontmatter.date)}
+              {formatDateRange(hito.frontmatter.date, hito.frontmatter.endDate)}
             </p>
             <p>{hito.frontmatter.description}</p>
           </div>

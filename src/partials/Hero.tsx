@@ -15,8 +15,11 @@ const Hero = () => (
       }
       description={
         <>
-          Hey, I am Mateo, also known as Veneiro on the web. I am a Student on
-          the EII of Oviedo
+          also known as Veneiro on the web, an almost graduate in Computer
+          Engineering and trained in Professional Music Education. I have a
+          solid theoretical and technical background that I am eager to apply. I
+          consider myself focused, hard-working and creative, with a proactive
+          approach to solving problems and learning new skills
         </>
       }
       avatar={
